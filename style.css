@@ -1,30 +1,27 @@
 body {
-  
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
+/* Estilos para a navbar */
 .navbar {
   background-color: #F21D44;
   font-family: Arial, Helvetica, sans-serif;
   padding: 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Adicionado para espaçar os itens */
 }
 
-.navbar-brand {
+.navbar-brand, .datas-amor {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
-  margin-right: auto;
 }
 
-.datas-amor {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  margin-right: auto;
-}
-
-.navbar-brand:hover {
+.navbar-brand:hover, .datas-amor:hover {
   color: #591420;
 }
 
@@ -126,13 +123,6 @@ p {
   background-color: #0056b3;
 }
 
-
-/* Estilo adicional */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
-
 /* Estilo para o vídeo */
 .video-container {
   margin-top: 2rem;
@@ -145,4 +135,73 @@ video {
   height: auto;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
+}
+
+/* Media Queries para tornar o design responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-pills {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-brand, .datas-amor {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .scrollspy-example {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand, .datas-amor {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
