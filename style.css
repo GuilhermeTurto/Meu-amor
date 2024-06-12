@@ -1,8 +1,19 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; /* Adicionado padding ao contêiner principal */
+  padding-bottom: 2rem; /* Garantir espaço entre o conteúdo e o botão */
 }
 
 /* Estilos para a navbar */
@@ -103,9 +114,10 @@ p {
 }
 
 .button-container {
-  margin-top: 2rem;
+  margin-top: auto; /* Empurra o botão para o final do contêiner flex */
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem; /* Adiciona margem inferior para espaçamento do final da página */
 }
 
 .btn {
